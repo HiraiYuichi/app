@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 
-gem 'jquery-rails'
+
 gem "rails", "~> 7.0.1"
 gem 'bcrypt',         '3.1.12'
 gem 'faker'
@@ -18,7 +18,7 @@ gem 'rails-i18n'
 gem "sprockets-rails"
 group :development, :test do
   gem 'sqlite3'
-  gem 'byebug',  '9.0.6', platform: :mri
+  gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :production do
