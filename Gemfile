@@ -16,10 +16,15 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'rails-i18n'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+group :development, :test do
+  gem 'sqlite3'
+end
 
+group :production do
+  gem 'pg'
+end
 # Use sqlite3 as the database for Active Record
 
-gem 'sqlite3', group: :development
 gem 'pg', group: :production
 
 # Use the Puma web server [https://github.com/puma/puma]
