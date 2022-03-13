@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 
 gem 'jquery-rails'
-gem "rails", "~> 7.0.1"
+#gem "rails", "~> 7.0.1"
 gem 'bcrypt',         '3.1.12'
 gem 'faker'
 gem 'turbolinks', '5.2.0'
@@ -20,12 +20,10 @@ gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
 
 group :development, :test do
-  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
+	gem "sqlite3", "~> 1.4"
+	  gem 'byebug',  '9.0.6', platform: :mri
 end
 
-group :production do
-  gem 'pg'
-end
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
