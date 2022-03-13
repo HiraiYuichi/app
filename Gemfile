@@ -19,8 +19,13 @@ gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 
-gem 'sqlite3', group: :development
-gem 'pg', group: :production
+group :development, :test do
+  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
+end
+
+group :production do
+  gem 'pg'
+end
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
